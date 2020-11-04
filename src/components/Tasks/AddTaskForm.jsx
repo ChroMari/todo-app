@@ -20,7 +20,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
       'completed': false
     }
     axios
-    .post('http://localhost:3001/tasks', obj)
+    .post('https://todo-app-reactserver.herokuapp.com/tasks', obj)
     .then(({ data }) => {
       onAddTask(list.id, data);
       toggleFormVisible();

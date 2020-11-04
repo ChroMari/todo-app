@@ -31,7 +31,7 @@ const AddList = ({ colors, onAdd }) => {
       return;
     }
     setIsLoading(true);
-    axios.post('http://localhost:3001/lists', {name: inputValue, colorId: selectedColor}).then(({ data}) => {
+    axios.post('https://todo-app-reactserver.herokuapp.com/lists', {name: inputValue, colorId: selectedColor}).then(({ data}) => {
       const color = colors.filter(c => c.id === selectedColor)[0];
       const listObj = { ...data, color, tasks: [] };
       onAdd(listObj);

@@ -14,7 +14,7 @@ const Tasks = ({ list, onEditTitle, onAddTask, onRemoveTask, onEditTask, without
     const newTitle = window.prompt('Название списка', list.name);
     if (newTitle) {
       onEditTitle(list.id, newTitle);
-      axios.patch('http://localhost:3001/lists/' + list.id, {name: newTitle}).catch(() => {
+      axios.patch('https://todo-app-reactserver.herokuapp.com/lists/' + list.id, {name: newTitle}).catch(() => {
         alert('Не удалось обновить название списка');
       });
     }

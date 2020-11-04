@@ -15,7 +15,7 @@ function App() {
     axios.get('https://todo-app-reactserver.herokuapp.com/lists?_expand=color&_embed=tasks').then(({ data }) => {
       setLists(data);
     });
-    axios.get('http://localhost:3001/colors').then(({ data }) => {
+    axios.get('https://todo-app-reactserver.herokuapp.com/colors').then(({ data }) => {
       setColors(data);
     });
   }, []);
@@ -54,7 +54,7 @@ function App() {
       return item;
     });
     setLists(newList);
-    axios.patch('http://localhost:3001/tasks/' + taskObj.id, { text: newTaskText})
+    axios.patch('https://todo-app-reactserver.herokuapp.com/tasks/' + taskObj.id, { text: newTaskText})
     .catch(() => {
       alert('Не удалось обновить задачу');
     });
@@ -69,7 +69,7 @@ function App() {
         return item;
       });
       setLists(newList);
-      axios.delete('http://localhost:3001/tasks/' + taskId)
+      axios.delete('https://todo-app-reactserver.herokuapp.com/tasks/' + taskId)
       .catch(() => {
         alert('Не удалось удалить задачу');
       })
@@ -89,7 +89,7 @@ function App() {
       return list;
     });
     setLists(newList);
-    axios.patch('http://localhost:3001/tasks/'+taskId, {
+    axios.patch('https://todo-app-reactserver.herokuapp.com/tasks/'+taskId, {
       completed
     })
     .catch((e) => {
