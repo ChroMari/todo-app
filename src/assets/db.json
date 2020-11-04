@@ -103,12 +103,6 @@
       "listId": 7,
       "text": "Сделали удаление и редактирование задач и списков",
       "completed": true
-    },
-    {
-      "listId": 2,
-      "text": "Сделать задачи по JS",
-      "completed": false,
-      "id": 18
     }
   ],
   "colors": [
