@@ -12,7 +12,7 @@ function App() {
   let location2 = useLocation();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/lists?_expand=color&_embed=tasks').then(({ data }) => {
+    axios.get('https://todo-app-reactserver.herokuapp.com/lists?_expand=color&_embed=tasks').then(({ data }) => {
       setLists(data);
     });
     axios.get('http://localhost:3001/colors').then(({ data }) => {
